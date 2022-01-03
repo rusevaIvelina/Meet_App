@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/rusevaIvelina/Meet_App.git/static/css/main.073c9b0a.css",
+    "main.js": "/rusevaIvelina/Meet_App.git/static/js/main.34807643.js",
+    "static/js/377.dda790c9.chunk.js": "/rusevaIvelina/Meet_App.git/static/js/377.dda790c9.chunk.js",
+    "service-worker.js": "/rusevaIvelina/Meet_App.git/service-worker.js",
+    "static/media/logo.svg": "/rusevaIvelina/Meet_App.git/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
+    "index.html": "/rusevaIvelina/Meet_App.git/index.html",
+    "main.073c9b0a.css.map": "/rusevaIvelina/Meet_App.git/static/css/main.073c9b0a.css.map",
+    "main.34807643.js.map": "/rusevaIvelina/Meet_App.git/static/js/main.34807643.js.map",
+    "377.dda790c9.chunk.js.map": "/rusevaIvelina/Meet_App.git/static/js/377.dda790c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.34807643.js"
+  ]
+}
