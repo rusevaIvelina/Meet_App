@@ -13,11 +13,9 @@ Calendar API to fetch upcoming events.
 ● Add an app shortcut to the home screen.
 ● View a chart showing the number of upcoming events by city.
 
-
-
-
 #User Stories:
-As a user, I would like to be able to filter events by city so that I can see the list of events that
+
+● As a user, I would like to be able to filter events by city so that I can see the list of events that
 take place in that city.
 ● As a user, I would like to be able to show/hide event details so that I can see more/less
 information about an event.
@@ -31,6 +29,7 @@ open the app faster.
 that I know what events are organized in which city.
 
 #Technical Details:
+
 ● A React application.
 ● Built using the TDD technique.
 ● Uses the Google Calendar API and OAuth2 authentication flow.
