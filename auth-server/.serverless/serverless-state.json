@@ -186,7 +186,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/auth-server/dev/1641409449984-2022-01-05T19:04:09.984Z/auth-server.zip"
+                "S3Key": "serverless/auth-server/dev/1641485378926-2022-01-06T16:09:38.926Z/auth-server.zip"
               },
               "Handler": "handler.getAuthURL",
               "Runtime": "nodejs12.x",
@@ -219,7 +219,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/auth-server/dev/1641409449984-2022-01-05T19:04:09.984Z/auth-server.zip"
+                "S3Key": "serverless/auth-server/dev/1641485378926-2022-01-06T16:09:38.926Z/auth-server.zip"
               },
               "Handler": "handler.getAccessToken",
               "Runtime": "nodejs12.x",
@@ -245,24 +245,24 @@
               "GetAccessTokenLogGroup"
             ]
           },
-          "GetAuthURLLambdaVersionY9f5QDFr98C4uromVV5XMWySdusrztaCAk5SEmW5aY": {
+          "GetAuthURLLambdaVersion5rgx8CYyo8Gq6p14uul1s1yhUFac7epkGNmrDk31Q": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAuthURLLambdaFunction"
               },
-              "CodeSha256": "P73pcmqcxIr4/8XGATn96npLWkdIhE3laJJlAx0FTwM="
+              "CodeSha256": "ENOpHr52LPjsyybKKM8lOxC3RTQ+TGGalTxRLgF/Isg="
             }
           },
-          "GetAccessTokenLambdaVersionFz4ywwKBG74vYa3RL6OGJoRI0Sb3KXkwAYGlEzgKI0": {
+          "GetAccessTokenLambdaVersionXkeAoEvDqdVgs5sR81N3Pkru5L56NG4GToF2pvLddc": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAccessTokenLambdaFunction"
               },
-              "CodeSha256": "P73pcmqcxIr4/8XGATn96npLWkdIhE3laJJlAx0FTwM="
+              "CodeSha256": "ENOpHr52LPjsyybKKM8lOxC3RTQ+TGGalTxRLgF/Isg="
             }
           },
           "ApiGatewayRestApi": {
@@ -420,7 +420,7 @@
               "GetAccessTokenLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1641409446299": {
+          "ApiGatewayDeployment1641485370304": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -520,7 +520,7 @@
           "GetAuthURLLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAuthURLLambdaVersionY9f5QDFr98C4uromVV5XMWySdusrztaCAk5SEmW5aY"
+              "Ref": "GetAuthURLLambdaVersion5rgx8CYyo8Gq6p14uul1s1yhUFac7epkGNmrDk31Q"
             },
             "Export": {
               "Name": "sls-auth-server-dev-GetAuthURLLambdaFunctionQualifiedArn"
@@ -529,7 +529,7 @@
           "GetAccessTokenLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAccessTokenLambdaVersionFz4ywwKBG74vYa3RL6OGJoRI0Sb3KXkwAYGlEzgKI0"
+              "Ref": "GetAccessTokenLambdaVersionXkeAoEvDqdVgs5sR81N3Pkru5L56NG4GToF2pvLddc"
             },
             "Export": {
               "Name": "sls-auth-server-dev-GetAccessTokenLambdaFunctionQualifiedArn"
@@ -666,7 +666,7 @@
         "timeout": 60,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GetAuthURLLambdaVersionY9f5QDFr98C4uromVV5XMWySdusrztaCAk5SEmW5aY"
+        "versionLogicalId": "GetAuthURLLambdaVersion5rgx8CYyo8Gq6p14uul1s1yhUFac7epkGNmrDk31Q"
       },
       "getAccessToken": {
         "handler": "handler.getAccessToken",
@@ -685,7 +685,7 @@
         "timeout": 60,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GetAccessTokenLambdaVersionFz4ywwKBG74vYa3RL6OGJoRI0Sb3KXkwAYGlEzgKI0"
+        "versionLogicalId": "GetAccessTokenLambdaVersionXkeAoEvDqdVgs5sR81N3Pkru5L56NG4GToF2pvLddc"
       }
     },
     "configValidationMode": "warn",
@@ -706,7 +706,7 @@
     "artifact": "C:\\Users\\ivaru\\meet\\auth-server\\.serverless\\auth-server.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/auth-server/dev/1641409449984-2022-01-05T19:04:09.984Z",
+    "artifactDirectoryName": "serverless/auth-server/dev/1641485378926-2022-01-06T16:09:38.926Z",
     "artifact": "auth-server.zip"
   }
 }
