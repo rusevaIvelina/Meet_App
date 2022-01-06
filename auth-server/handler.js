@@ -110,7 +110,7 @@ module.exports.getCalendarEvents = async (event) => {
     );
 
   })
-  .then( results => {
+  .then((results) => {
     return {
       statusCode: 200,
       headers: {
@@ -120,7 +120,6 @@ module.exports.getCalendarEvents = async (event) => {
     };
   })
   .catch((err) => {
-    // Handle error
     console.error(err);
     return {
       statusCode: 500,
