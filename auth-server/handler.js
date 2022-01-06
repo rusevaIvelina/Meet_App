@@ -45,7 +45,7 @@ module.exports.getAccessToken = async (event) => {
     client_secret,
     redirect_uris[0]
   );
-  // Decode authorization code extracted from the URL query
+ 
   const code = decodeURIComponent(`${event.pathParameters.code}`);
 
   return new Promise((resolve, reject) => {
@@ -60,6 +60,9 @@ module.exports.getAccessToken = async (event) => {
       // Respond with OAuth token 
       return {
         statusCode: 200,
+        headers: {
+          "Access-Control-Allow-Origin": '*'
+        },
         body: JSON.stringify(token),
       };
     })
