@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 
 class Event extends Component {
     render() {
@@ -6,4 +6,4 @@ class Event extends Component {
     }
 }
 
-export default Event;
+export default Event;*/
