@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
@@ -8,10 +8,10 @@ class App extends Component {
     return (
       <div className="App">
         <CitySearch/>
-        <EventList/>
+        <EventList />
       </div>
     );
   }
 }
 
-export default App;
+export default App;*/
