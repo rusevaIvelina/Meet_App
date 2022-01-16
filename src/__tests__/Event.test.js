@@ -1,4 +1,4 @@
-/*import React from 'react';
+import React from 'react';
 import { shallow } from 'enzyme';
 import { mockData } from '../mock-data';
 import Event from '../Event';
@@ -10,7 +10,7 @@ describe('<Event/> component', () => {
         EventWrapper = shallow(<Event event={mockData[1]}/>);
     });
 
-    /*test('renders summary', () => {
+    test('renders summary', () => {
         expect(EventWrapper.find('.summary')).toHaveLength(1);
     });
 
@@ -54,4 +54,4 @@ describe('<Event/> component', () => {
         EventWrapper.find('.hide-detials-btn').simulate('click');
         expect(EventWrapper.state('collapsed')).toBe(true);
     });
-});*/
+});
