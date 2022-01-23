@@ -9,7 +9,7 @@ describe('<CitySearch /> component', () => {
     let locations, CitySearchWrapper;
     beforeAll(() => {
       locations = extractLocations(mockData);
-        CitySearchWrapper = shallow(<CitySearch locations={locations}/>);
+        CitySearchWrapper = shallow(<CitySearch locations={locations} updateEvents={() => {}}/>);
     });
 
   test('render text input', () => {
@@ -35,7 +35,7 @@ describe('<CitySearch /> component', () => {
   });
 
   test('render list of suggestions correctly', () => {
-    //const locations = extractLocations(mockData);
+    const locations = extractLocations(mockData);
     CitySearchWrapper.setState({ suggestions: locations });
     const suggestions = CitySearchWrapper.state('suggestions');
     expect(CitySearchWrapper.find('.suggestions li')).toHaveLength(suggestions.length + 1);
@@ -58,11 +58,10 @@ describe('<CitySearch /> component', () => {
 
   test("selecting a suggestion should change query state", () => {
     CitySearchWrapper.setState({
-      query: 'Berlin'  
+      query: 'Berlin', 
     });
     const suggestions = CitySearchWrapper.state('suggestions');
     CitySearchWrapper.find('.suggestions li').at(0).simulate('click');
     expect(CitySearchWrapper.state("query")).toBe(suggestions[0]);
   });
-
 });

@@ -3,7 +3,8 @@ import Button from 'react-bootstrap/Button';
 
 class Event extends Component {
 
-  state= {
+    state= {
+    event: {},
     collapsed: true,
   };
 

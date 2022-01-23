@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import Event from './Event';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class EventList extends Component {
   render() {
-    const { events } = this.props;
-    console.log(events);
+    const { events} = this.props;
     return (
-      <ul className='EventList'>
+      <Row className='d-flex justify-content-center event-list-wrapper'>
         {events.map(event =>
-          <li key={event.id}>
+         <Col sm={12} md={6} lg={4} key={event.id}>
             <Event event={event}/>
-          </li>
+          </Col>
           )}
-      </ul>
+      </Row>
     );
   }
 }
