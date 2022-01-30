@@ -6,7 +6,7 @@ import React, { Component } from 'react';
     render() {
         return(
         <div className="NumberOfEvents">
-            <label className='number-label'> number of entries </label>
+            <label className='number-label'> Number of Events </label>
             <input type="number" className="number"
             min="1" max="32"
             value={this.props.numberOfEvents} 
