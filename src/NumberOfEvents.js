@@ -8,7 +8,7 @@ import React, { Component } from 'react';
         <div className="NumberOfEvents">
             <label className='number-label'> number of entries </label>
             <input type="number" className="number"
-            min="1" max="100"
+            min="1" max="32"
             value={this.props.numberOfEvents} 
             onChange={(e) => this.props.updateNumberOfEvents(e)}/>
         </div>
