@@ -29,19 +29,32 @@ class App extends Component {
     this.mounted = false;
   }
 
-  updateEvents = (location, eventCount) => {
+  updateEvents = (location) => {
     getEvents().then((events) => {
-      const locationEvents =
-        location === "all"
-          ? events
-          : events.filter((event) => event.location === location);
-      if (this.mounted) {
-        this.setState({
-          events: locationEvents.slice(0, this.state.numberOfEvents),
-          currentLocation: location,
-        });
-      }
+      const locationEvents = (location === 'all') ?
+        events :
+        events.filter((event) => event.location === location);
+      this.setState({
+        events: locationEvents
+      });
     });
+  }
+
+  updateNumberOfEvents = async (e) => {
+    const newNumber = e.target.value ? parseInt(e.target.value) : 32;
+
+    if(newNumber < 1 || newNumber > 32){
+      await this.setState({ 
+        numberOfEvents: newNumber,
+      errorText: 'Please choose a number between 0 and 32' 
+    });
+    } else {
+      await this.setState({
+        errorText:'',
+        numberOfEvents: newNumber
+      });
+      this.updateEvents(this.state.currentLocation, this.state.numberOfEvents);
+    } 
   };
 
 
