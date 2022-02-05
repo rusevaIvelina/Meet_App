@@ -40,9 +40,9 @@ class App extends Component {
         events: locationEvents.slice(0, eventCount),
         location: location,
         currentLocation: location
-      });
+       });
       }
-        });    
+     });    
     };
 
   updateNumberOfEvents = async (e) => {
@@ -66,6 +66,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1 className='page-title'> Meet App </h1>
         <CitySearch locations={this.state.locations} 
           updateEvents={this.updateEvents} />
           <NumberOfEvents numberOfEvents={this.state.numberOfEvents} 
