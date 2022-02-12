@@ -51,7 +51,7 @@ class App extends Component {
     if(newNumber < 1 || newNumber > 32) {
       await this.setState({ 
         numberOfEvents: newNumber,
-      errorText: 'Please choose a number between 1 and 32' 
+        errorText: 'Please choose a number between 1 and 32' 
     });
     } else {
       await this.setState({
