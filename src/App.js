@@ -58,7 +58,7 @@ class App extends Component {
         errorText:'',
         numberOfEvents: newNumber
       });
-      this.updateEvents(this.state.currentLocation, this.state.numberOfEvents);
+      this.updateEvents(this.state.currentLocation, this.state.numberOfEvents, this.state.errorText);
     } 
   };
 
