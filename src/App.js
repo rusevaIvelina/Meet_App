@@ -19,30 +19,31 @@ class App extends Component {
     isOnline: true
   }
 
-    /*componentDidMount() {
-    this.mounted = true;
-    getEvents().then((events) => {
-      if (this.mounted) {
-        this.setState({ 
-          events: events.slice(0, this.state.numberOfEvents),
-          locations: extractLocations(events) 
-        });
-      }
-    });
-  }*/
-
   async componentDidMount() {
     this.mounted = true;
+    // testing:
+    // getEvents().then((events) => {
+      //if (this.mounted) {
+//  this.setState({ events, locations:extractLocations(events) })
+    //  }
+    // });
+    //live:
     const accessToken = localStorage.getItem('access_token');
     const isTokenValid = (await checkToken(accessToken)).error ? false : true;
     const searchParams = new URLSearchParams(window.location.search);
     const code = searchParams.get('code');
-    this.setState({ showWelcomeScreen: !(code || isTokenValid)});
-    if ((code || isTokenValid) && this.mounted) {
+    this.setState({ showWelcomeScreen: !(code || isTokenValid) });
+    if (code || (isTokenValid && this.mounted)) {
       getEvents().then((events) => {
         if (this.mounted) {
-          this.setState({ events, locations: extractLocations(events)});
+          this.setState({ 
+            events: events.slice(0, this.state.numberOfEvents),
+          locations: extractLocations(events) });
         }
+      });
+    } if (!navigator.onLine) {
+      this.setState({
+        isOnline: false,
       });
     }
   }
@@ -86,6 +87,7 @@ class App extends Component {
 
   render() {
     if (this.state.showWelcomeScreen === undefined ) return <div className='App'/>
+    if (this.state.showWelcomeScreen === false) {
     return (
       <div className="App">
         <h1 className='page-title'> Meet App </h1>
@@ -96,10 +98,17 @@ class App extends Component {
           updateNumberOfEvents={this.updateNumberOfEvents}
           errorText = {this.state.errorText}/>
         <EventList events={this.state.events}/>
-        <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken()}} />
       </div>
-    );
+    )};
+    if (this.state.showWelcomeScreen === true) {
+      return (
+        <div className='App'>
+          <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken()}} />
+        </div>
+      )
+    }
   }
+
 }
 
 export default App;
