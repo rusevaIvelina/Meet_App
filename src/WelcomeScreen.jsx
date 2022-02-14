@@ -35,7 +35,7 @@ return props.showWelcomeScreen ?
   href="https://rusevaivelina.github.io/meet/privacy.html"
   rel="nofollow noopener"
 >
-Privacy policy
+   Privacy policy
 </a>
 </div>
 )
