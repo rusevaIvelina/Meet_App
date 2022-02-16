@@ -113,15 +113,15 @@ class App extends Component {
           <h4>Events in each city</h4>
 
           <ScatterChart
-          width={400}
+          width={800}
           height={400}
           margin={{
             top: 20, right: 20, bottom: 20, left: 20,
           }}
         >
           <CartesianGrid />
-          <XAxis type="number" dataKey="x" name="stature" unit="cm" />
-          <YAxis type="number" dataKey="y" name="weight" unit="kg" />
+          <XAxis type="category" dataKey="city" name="stature" />
+          <YAxis type="number" dataKey="number" name="number of events" />
           <Tooltip cursor={{ strokeDasharray: '3 3' }} />
           <Scatter  data={this.getData()} fill="#8884d8" />
         </ScatterChart>
