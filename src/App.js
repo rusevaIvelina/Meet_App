@@ -8,6 +8,7 @@ import { extractLocations, getEvents, checkToken, getAccessToken } from './api';
 import { WarningAlert } from './Alert';
 import WelcomeScreen from './WelcomeScreen';
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { EventGenre } from './EventGenre';
 
 class App extends Component {
   state = {
@@ -112,6 +113,10 @@ class App extends Component {
           errorText = {this.state.errorText}/>
           <h4>Events in each city</h4>
 
+          <div className='data-vis-wrapper'>
+
+          <EventGenre events={this.state.events}/>
+
           <ResponsiveContainer height={400} >
           <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
             <CartesianGrid />
@@ -128,6 +133,7 @@ class App extends Component {
         </ResponsiveContainer>
 
         <EventList events={this.state.events}/>
+      </div> 
       </div>
     )};
     if (this.state.showWelcomeScreen === true) {
