@@ -11,4 +11,6 @@ Technologies
 
 React
 
+Jest
+
 .
