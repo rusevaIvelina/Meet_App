@@ -8,8 +8,29 @@ Filter events by city. Show/hide event details. Specify number of events. Use th
 
 User Stories
 
-As a user, I would like to be able to filter events by city so that I can see the list of events that take place in that city. As a user, I would like to be able to show/hide event details so that I can see more/less information about an event. As a user, I would like to be able to specify the number of events I want to view in the app so that I can see more or fewer events in the events list at once. As a user, I would like to be able to use the app when offline so that I can see the events I viewed the last time I was online. As a user, I would like to be able to add the app shortcut to my home screen so that I can open the app faster. As a user, I would like to be able to see a chart showing the upcoming events in each city so that I know what events are organized in which city.
+Meet app displays a list of upcoming developer events, showing for each event: the title, date, time and location. A "Show details" button toggles a full event description and a link to the details on the user's Google calendar.
+By default 12 events are displayed from across all locations. Users can search for specific event locations and specify the number of events that they wish to see displayed.
+A progress bar appears while the page loads and updates.
+Alerts are displayed to notify the user if a location requested does not exist and if the requested number of events exceeds the maximum number that the page can display.
+In addition to the events the app displays two charts implemented using Recharts. A pie chart shows the events summarized by subject area and a scatter chart shows the number of events by location.
+Meet app is progressive and can be used offline where it will display events cached during the most recent visit. An alert indicates to the user when they are working offline.
+The app is responsive and adjusts automatically to fit the screen size available.
+The app uses OAuth2.0 to implement efficient user authentication and authorization. Users sign in with Google and provide consent to access their Google calendar. This completes the authorization process and takes users directly to the main page displaying the events.
+The cloud-based server that handles the authorisation process is hosted by AWS Lambda. The framework Serverless was used to configure the endpoints and deploy the event handlers.
 
-Technical Details
 
-A React application. Built using the TDD technique. Uses the Google Calendar API and OAuth2 authentication flow. Uses serverless functions (AWS lambda) for the authorization server instead of using a traditional server. Passes Lighthouse’s PWA checklist. Works offline or in slow network conditions with the help of a service worker. The API calls use React axios and async/await. Implements an alert system using an OOP approach to show information to the user. Makes use of data visualization (recharts preferred).
+Technologies
+
+React
+Jest
+Enzyme
+jest-cucumber
+Puppeteer
+Serverless
+Googleapis
+Axios
+Atatus
+nprogress
+Recharts
+
+.
