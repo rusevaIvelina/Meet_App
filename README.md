@@ -12,13 +12,21 @@ Technologies
 • React
 
 • Jest
+
 • Enzyme
+
 • Jest-cucumber
+
 • Puppeteer
+
 • Goggleapis
+
 • Axios
+
 • Atatus
+
 • nprogress
+
 • Recharts 
 
 
