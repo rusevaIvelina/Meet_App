@@ -9,8 +9,16 @@ Filter events by city. Show/hide event details. Specify number of events. Use th
 
 Technologies
 
-React
+• React
+• Jest
+• Enzyme
+• Jest-cucumber
+• Puppeteer
+• Goggleapis
+• Axios
+• Atatus
+• nprogress
+• Recharts 
 
-Jest
 
 .
